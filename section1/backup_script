@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Author: Jithin
+# Date Created: 16/05/24
+# Last Modified: 16/05/24
+
+# Description
+# backup the webomates folder from the desktop
+
+# Usage
+# backup_script
+
+
+tar -cvf ~/Desktop/bash_course/section1/backup/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/Desktop/webomates 2>/dev/null
+echo "Backup done"
+exit 0

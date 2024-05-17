@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Author: Jithin
+# Date Created: 16/05/24
+# Last Modified: 16/05/24
+
+# Description
+# prints "Hello World" to the terminal
+
+# Usage
+# our_first_script
+
+# prints hellow world on the screen
+
+echo 'Hello World'
+exit 0
