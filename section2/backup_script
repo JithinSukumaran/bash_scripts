@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Author: Jithin
+# Date Created: 16/05/24
+# Last Modified: 16/05/24
+
+# Description
+# backup the webomates folder from the desktop
+
+# Usage
+# backup_script
+
+user=$USER
+directory="$HOME/Desktop/webomates"
+
+echo "Hello, ${user^}"
+echo "I will now back up your home directory, $directory"
+
+currentdir=$(pwd)
+
+echo "You are running this script from ${currentdir}"
+echo "Therefore, I will save the backup in ${currentdir}"
+
+
+tar -cf ${currentdir}/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ${directory} 2>/dev/null
+echo ${currentdir}/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ${directory} 2>/dev/null
+echo "Backup Completed Successfully"
+exit 0

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+name="Jithin"  # done
+echo "Hello how are you ${name}"
+
+echo "This is your home path which is a shell variable: ${HOME}"
+
+echo "Parameter Expansion Tricks ${name,} ${name^^}"
+
+echo "command substitution: ls $(ls)"
+
+echo "Arithemtic expansion, 3**4: $((3**4))"
+
+echo "To deal with decimal points, 4/3: $(echo 'scale=2; 4/3' | bc)"
+
+echo "Tilde expansion current path: $(echo ~+), Old path: $(echo ~-)"
+echo "Tilde expansion current path: $PWD, Old path: $OLDPWD"
+
+echo "Brace expansion: a..t: $(echo {a..t})"
+echo "Brace expansion: 1..8..2: $(echo {1..8..2})"
+
