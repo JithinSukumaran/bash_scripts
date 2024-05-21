@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Total arguments: $#"
+IFS=,  # default first character of IFS is space
+touch "$*"
+touch "$@"
+touch $*
+touch $@
