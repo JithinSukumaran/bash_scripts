@@ -1,0 +1,33 @@
+#!/bin/bash
+
+read -s -p "Enter your first name: " name
+echo 
+read -s -p "Enter your last name: " last_name
+echo 
+read -N 4 -s -p "Enter your extension number: " extension
+echo 
+read -N 4 -s -p "Enter your access code: " access_code
+echo
+
+
+PS3="What type of phone do you want: "
+select phone in headset handheld
+do
+echo "You have selected $phone phone type"
+break
+done
+
+PS3="Which department do you work in: "
+select department in "finance" "sales" "customer service" "engineering"
+do
+echo "You work in the $department department"
+break
+done
+
+echo "Your first name is $name"
+echo "Your last name is $last_name"
+
+echo "Your extension number is $extension"
+echo "Your access code is $access_code"
+
+echo "$$name,$last_name,$extension,$access_code" >> extension.csv
