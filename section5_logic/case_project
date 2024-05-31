@@ -1,0 +1,23 @@
+#!/bin/bash
+
+PS3="Select one city from the list: "
+
+select city in "Tokyo" "London" "Los Angeles" "Moscow" "Dubai" "Manchester" "New York" "Paris" "Banglore" "Johannesburg" "Istanbul" "Milan" "Abu Dhabi" "Pune" "Nairobi" "Berlin" "Karachi";
+do 
+    echo "you have seleted $city city"
+    case "$city" in
+    "Tokyo") echo "$city is in Japan";;
+    "London" | "Manchester") echo "$city is in UK";;
+    "Los Angeles" | "New York") echo "$city is in USA";;
+    "Moscow") echo "$city is in Russia";;
+    "Dubai" | "Abu Dhabi") echo "$city is in UAE";;
+    "Berlin") echo "$city is in Germany";;
+    "Johannesburg") echo "$city is in South Africa";;
+    "Istanbul") echo "$city is in Turkey";;
+    "Milan") echo "$city is in Italy";;
+    "Pune" | "Banglore") echo "$city is in India";;
+    "Nairobi") echo "$city is in Kenya";;
+    "Karachi") echo "$city is in Pakistan";;
+    esac
+    break
+done

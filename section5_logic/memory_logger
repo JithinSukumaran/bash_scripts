@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# my solution
+if [ -e performance ]; then
+    echo "performance folder exists"
+    if [ -e performance/memory.log ]; then
+        echo "memory.log file also exists"
+        echo "Appending free output to the memory.log file"
+        free >> performance/memory.log
+    else
+        echo "Creating memory.log file"
+        echo "Appending free output to the memory.log file"
+        touch performance/memory.log
+        free >> performance/memory.log
+    fi
+
+else
+    echo "Creating performance folder"
+    echo "Creating memory.log file"
+    echo "Appending free output to the memory.log file"
+    mkdir performance
+    free >> performance/memory.log
+fi
+
+
+## authors solution
+# if [ -d performance ]; then
+#     echo "performance folder exists"
+# else
+#     mkdir performance
+#     echo "performance folder has been created"
+# fi
+# free >> perfomance/memory.log
