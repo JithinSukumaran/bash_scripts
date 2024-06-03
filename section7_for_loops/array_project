@@ -1,0 +1,11 @@
+#!/bin/bash
+
+readarray -t urls < urls.txt
+
+echo "${urls[@]}"
+
+for url in "${urls[@]}"; do
+    echo "We are in the loop: $url"
+    webname=$(echo $url | cut -d "." -f 2)
+    curl --head "$url" > "$webname".txt
+done
